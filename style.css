@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: 0;
+  box-sizing: border-box;
+  transition: all ease 0.2s;
+  list-style-type: none;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+*,
+  *::before,
+  *::after {
+    animation: forwards;
+    animation-name: initial;
+
+  }
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e5bcee;
+    color:rgba(36, 3, 39, 0.6);
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(178, 96, 185, 0.6);
+    opacity: 0.7;
+    
+}
+
+.container::after{
+  content: "+";
+  font-size: 2em;
+  text-align: left;
+  align-content: flex-end;
+  display: block;
+  color:#e5bcee;
+  position: absolute;
+  left: 25rem;
+  top: 7rem;
+  width: 3rem;
+  height: 3rem;
+  opacity: 70%;
+  background: linear-gradient(55.85deg, #bc8cc7 2%, #461b50 48.45%);
+  border-radius: 1rem;
+}
+.container::before{
+  content: " ___________________________________";
+  display: block;
+  position: absolute;
+  right: 30rem;
+  bottom: -10rem;
+  width: 18.9375rem;
+  height: 18rem;
+  opacity: 70%;
+  background: linear-gradient(-42.85deg, #461b50 3%, #bc8cc7 48.45%);
+  border-radius: 1.25rem;
+ font-size: 1rem;
+}
+
+h1 {
+    margin-bottom: 20px;
+    
+}
+
+.stopwatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#display {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+#display::before{
+  content: " ________________________";
+  display: block;
+  position: absolute;
+  left: 50rem;
+  top: 2.5rem;
+  width: 10.9375rem;
+  height: 10rem;
+  opacity: 70%;
+  background: linear-gradient(-42.85deg, #461b50 3%, #bc8cc7 48.45%);
+  border-radius: 1.25rem;
+  rotate: 180deg;
+}
+
+.buttons button {
+    font-size: 1em;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#startStopBtn {
+    background-color: #e5bcee;   
+    border-style: groove;
+    box-shadow: 0 0 10px rgba(178, 96, 185, 0.6);
+
+}
+#startStopBtn:hover,#resetBtn:hover{
+    background-color: #dd9feb;
+}
+#startStopBtn::before{
+  content: " --------------------------------";
+  align-content: end;
+  display: block;
+  position: absolute;
+  left: -2.025rem;
+  bottom: 9.5rem;
+  width: 10.9375rem;
+  height: 10rem;
+  opacity: 70%;
+  background: linear-gradient(42.85deg, #461b50 3%, #bc8cc7 48.45%);
+  border-radius: 1.25rem;
+  font-size: 2em;
+}
+#startStopBtn::after{
+  content: " <<<";
+  color:#e5bcee;
+  display: block;
+  position: absolute;
+  bottom: 3rem;
+  right: -1.5625rem;
+  width: 7rem;
+  height: 7rem;
+  opacity: 70%;
+  background: linear-gradient(42.85deg, #bc8cc7 2%, #461b50 48.45%);
+  border-radius: 1.25rem;
+  border-left: 1px groove #461b50;
+  
+}
+
+
+#resetBtn {
+    background-color: #e5bcee;
+    border-style: groove;
+    box-shadow: 0 0 10px rgba(178, 96, 185, 0.6);
+
+    
+}
+#resetBtn::before{
+  content: " --+";
+  text-align:start;
+  font-size: 2rem;
+  display: block;
+  position: absolute;
+  left: 7.5625rem;
+  top: 5.5rem;
+  width: 6rem;
+  height: 6rem;
+  opacity: 70%;
+  background: linear-gradient(42.85deg, #461b50 3%, #bc8cc7 48.45%);
+  border-radius: 1.25rem; 
+}
+
+
+#resetBtn::after{
+  content: "<<<----";
+  align-content: end;
+  color:#e5bcee;
+  display: block;
+  position: absolute;
+  top:9.6rem;
+  right: 6.5625rem;
+  width: 4rem;
+  height: 4rem;
+  opacity: 70%;
+  background: linear-gradient(42.85deg, #bc8cc7 2%, #461b50 48.45%);
+  border-radius: 0.7rem;
+  
+}
+
+
+@media(max-width:930px){
+
+  .container::after{
+     display: none;
+  }
+}
+
+@media(max-width:768px){
+  
+  #startStopBtn::before{
+      display: none;
+  }
+
+  #resetBtn::after{
+    right: 1rem;
+  }
+  #resetBtn::before{
+    left: 1rem;
+  }
+  
+
+  #display::before{
+    left: 28rem;
+    top: 2rem;
+  }
+
+}
+
+@media(max-width:525px){
+  .container::before{
+    left: -5rem;
+    bottom: -5rem;
+    width: 15.9375rem;
+   height: 15rem;
+   rotate:45deg;
+  }
+
+  #startStopBtn::after{
+    rotate: -45deg;
+    right: -4rem;
+  }
+  
+}
+
+
